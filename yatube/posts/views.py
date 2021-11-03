@@ -1,6 +1,3 @@
-from django.shortcuts import render
-# Create your views here.
-
 # ice_cream/views.py
 from django.http import HttpResponse
 
@@ -11,11 +8,11 @@ def index(request):
 
 
 # Страница со списком групп
-def posts(request):
+def groups(request):
     return HttpResponse('Список групп')
 
 
 # Страница с информацией о группе;
 # view-функция принимает параметр slug:slug из path()
-def group_posts(request, slug:slug):
-    return HttpResponse(f'Группа номер {slug:slug}')
+def group_posts(request, pk):
+    return HttpResponse(f'Группа номер {pk}')
