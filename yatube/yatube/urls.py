@@ -15,17 +15,10 @@ Including another URLconf
 """
 
 
-# yatube/urls.py (главный файл url проекта)
-# По умолчанию в проект Django подключена система администрирования
 from django.contrib import admin
-# Функция include позволит использовать path() из других файлов.
-# Импортируем!
 from django.urls import include, path
 
 urlpatterns = [
-    # Дорогой Джанго, если запрошена главная страница (''),
-    # перейди в файл urls приложения posts и проверь там все пути
     path('', include('posts.urls', namespace='posts')),
-    # Встроенная админка в Django подключена по этому адресу «из коробки»
     path('admin/', admin.site.urls),
 ]
