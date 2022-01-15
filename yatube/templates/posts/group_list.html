@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
 
-{% block title %}Записи сообщества{% endblock %}
+{% block title %}{group.title}{% endblock %}
 
 {% block content %}
 <main>
   <div class="container py-5">
-    <h1>Записи сообщества </h1>
+    Записи сообщества
+    <h1>{{ group.title }}</h1>
+    <p>{{ group.description }}</p>
       {% for post in posts %}
         <ul>
           <li>
